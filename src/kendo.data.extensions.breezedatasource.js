@@ -7,7 +7,7 @@
 
 	var readFromBreeze = function (options) {
 		var orderVal = "",
-				sortOps = options.data.sort;
+			sortOps = options.data.sort;
 
 			if (sortOps) {
 				orderVal = sortOps.field + " " + sortOps.dir;
