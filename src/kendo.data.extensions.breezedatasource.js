@@ -7,20 +7,20 @@
 
 	var readFromBreeze = function (options) {
 		var orderVal = "",
-        sortOps = options.data.sort;
+				sortOps = options.data.sort;
 
-      if (sortOps) {
-        orderVal = sortOps.field + " " + sortOps.dir;
-      }
+			if (sortOps) {
+				orderVal = sortOps.field + " " + sortOps.dir;
+			}
 
-      var query = new breeze.EntityQuery(endpoint)
-        .orderBy(orderVal)
-        .skip(options.data.skip)
-        .take(options.data.take);
+			var query = new breeze.EntityQuery(endpoint)
+				.orderBy(orderVal)
+				.skip(options.data.skip)
+				.take(options.data.take);
 
-      breezeEntityManager.executeQuery(query).then(function(xhr){
-        options.success(xhr.results);
-      });
+			breezeEntityManager.executeQuery(query).then(function(xhr){
+				options.success(xhr.results);
+			});
 	};
 
 	// Specify a CRUD transport object for our custom Kendo DataSource
