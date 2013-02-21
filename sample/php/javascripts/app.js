@@ -5,7 +5,7 @@ $(function(){
   // DataService instance and tell it where our end-point is,
   // and also tell it not to use any metadata
   var dataService = new breeze.DataService({
-      serviceName: '/api/todos.php',
+      serviceName: 'api/todos.php',
       hasServerMetadata: false
   });
 
