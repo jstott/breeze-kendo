@@ -14,5 +14,7 @@ becomes the disconnect between a full breeze entity and what now sits within the
 ### SPA Sample
 The SPA sample uses the Northwind db, EF, Breeze, and Durandal (all from the template - less the db and context/model classes).
 Running the SPA sample, click on the 'Details' tab - that will show the grid bound to the Northwind/Products data.
+Sorting / paging is working
 
-
+### Not Addressed
+Filter handling still needs to be added...
