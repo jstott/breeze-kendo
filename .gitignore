@@ -5,9 +5,7 @@
 #NuGet - http://stackoverflow.com/questions/5533050/gitignore-exclude-folder-but-include-specific-subfolder
 # dir/* - '*' is significant to not completely ignore dir, but only files within so you can override later
 sample/SPA/packages/*
-sample/SPA/HotTowelSpa/content/kendo/*
-sample/SPA/HotTowelSpa/scripts/kendo/*
-sample/SPA/HotTowelSpa/App/Durandal/*
+
 
 # Build Folders 
 _bin*/
