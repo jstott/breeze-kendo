@@ -1,0 +1,40 @@
+﻿<section>
+    <h2 data-bind="html: title"></h2>
+    <hr />
+    <form class="form-horizontal">
+        <div class="control-group">
+            <label class="control-label">First Name</label>
+            <div class="controls">
+                <input data-kendo-bind="value: koModel.firstName" />
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Last Name</label>
+            <div class="controls">
+                <input data-kendo-bind="value: koModel.lastName" />
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Gender</label>
+            <div class="controls">
+                <select data-kendo-bind="source: koModel.genders, value: koModel.gender"></select>
+            </div>
+        </div>
+        <div class="control-group">
+            
+            <div class="controls">
+                <label class="checkbox">
+                    <input type="checkbox" data-kendo-bind="checked: koModel.agreed" />
+                    I have read the licence agreement
+                </label>
+            </div>
+        </div>
+         <div class="control-group">
+            <div class="controls">
+               <button data-kendo-bind="enabled: koModel.agreed, click: koModel.register">Register</button>
+            </div>
+        </div>
+        
+    </form>
+
+</section>

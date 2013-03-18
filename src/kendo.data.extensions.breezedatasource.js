@@ -38,7 +38,9 @@ var manager = new breeze.EntityManager("api/Island");
     $.extend(BreezeTransport.prototype, {
         read: function (options) {
             var orderVal = this.defaultSort,
+                filterPredicate = this.defaultFilter,
                 sortOps = options.data.sort,
+                filterOps = options.data.filter,
                 self = this;
 
             if (sortOps && sortOps.length > 0) {
@@ -50,6 +52,15 @@ var manager = new breeze.EntityManager("api/Island");
                         orderVal += sortOps[i].field + " " + sortOps[i].dir;
                     }
             }
+            //if (filterOps && filterOps.filters.length > 0) {
+            //    filterPredicate = '';
+            //    for (var x = 0; x < filterOps.filters.length; i++) {
+            //        if (x> 0) {
+            //            orderVal += ",";
+            //        }
+            //        orderVal += filterOps.filters[x].field + " " + filterOps.filters[i].dir;
+            //    }
+           // }
             var payload = { data: [], total: 0 },
                 query = new breeze.EntityQuery(this.endPoint)
 				.orderBy(orderVal)

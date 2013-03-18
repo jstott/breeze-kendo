@@ -37,7 +37,7 @@
             }),
             pageable: true,
             sortable: true,
-            filterable: true
+            filterable: false
             
         };
     };

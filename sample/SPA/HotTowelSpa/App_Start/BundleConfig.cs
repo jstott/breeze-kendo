@@ -33,7 +33,6 @@ namespace HotTowelSpa
                 .Include("~/Content/bootstrap-responsive.css")
                 .Include("~/Content/durandal.css")
                 .Include("~/Content/toastr.css")
-                
 				.Include("~/Content/kendo/2012.3.1114/kendo.common.min.css")
 			.Include("~/Content/kendo/2012.3.1114/kendo.default.min.css")
 			.Include("~/Content/app.css")

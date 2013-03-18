@@ -2,8 +2,8 @@
     paths: { "text": "durandal/amd/text" }
 });
 
-define(['durandal/app', 'durandal/viewLocator', 'durandal/system', 'durandal/plugins/router', 'services/logger'],
-    function (app, viewLocator, system, router, logger) {
+define(['durandal/app', 'durandal/viewLocator', 'durandal/viewModelBinder', 'durandal/system', 'durandal/plugins/router', 'services/logger'],
+    function (app, viewLocator, viewModelBinder, system, router, logger) {
 
     // Enable debug message to show in the console 
     system.debug(true);
@@ -23,7 +23,14 @@ define(['durandal/app', 'durandal/viewLocator', 'durandal/system', 'durandal/plu
         breeze.NamingConvention.camelCase.setAsDefault();
         // Adapt to touch devices
         app.adaptToDevice();
+        // allow KendoUI to distinguish its bindings as data-kendo-bind w/o conflict with KO
+        kendo.ns = "kendo-"; 
+        viewModelBinder.beforeBind = function (obj, view) {
+            kendo.bind(view, obj.viewModel || obj);
+        };
         //Show the app by setting the root view model for our application.
         app.setRoot('viewmodels/shell', 'entrance');
     });
-});
+    
+        
+    });
