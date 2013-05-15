@@ -3,7 +3,7 @@
     var self = this;
 
     this.activate = function () {
-      logger.log('Details View Activated', null, 'details', true);
+      logger.log('Grid Activated', null, 'grid', true);
 
       // override ko.kendo plug-in - to 
       ko.kendo.setDataSource = function (widget, fnCall, options) {
@@ -13,8 +13,9 @@
     };
     
     this.viewAttached = function (view) {
-      logger.log('viewAttached', this.title, 'parts', false);
+      logger.log('viewAttached', this.title, 'grid', false);
     };
+
     this.datacontext = datacontext;
     this.title = 'Kendo Grid View - via BreezeDataSource';
     this.gridProductDataSource = new kendo.data.extensions.BreezeDataSource({

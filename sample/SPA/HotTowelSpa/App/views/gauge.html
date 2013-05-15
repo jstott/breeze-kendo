@@ -1,10 +1,10 @@
 ﻿<div class="row-fluid">
-    
+    <h2 class="page-title" data-bind="text: title"></h2>
     <hr/>
     <div class="span3" data-bind="kendoLinearGauge: {
-        value: signOn.value,
+    value: gaugeData.value,
         gaugeArea: { background: 'white' },
-        scale: signOn.scaleOptions,
+        scale: gaugeData.scaleOptions,
         pointer: { color: 'red', shape: 'arrow' }
     }"></div>
     
