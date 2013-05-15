@@ -14,6 +14,7 @@ namespace HotTowelSpa
               new ScriptBundle("~/scripts/vendor")
                 .Include("~/scripts/jquery-{version}.js")
 				.Include("~/scripts/jquery-migrate-1.1.1.min.js")
+				.Include("~/scripts/kendo/2013.1.319/kendo.all.min.js")
                 .Include("~/scripts/knockout-{version}.debug.js")
 				.Include("~/scripts/knockout.mapping-latest.js")
                 .Include("~/scripts/sammy-{version}.js")
@@ -22,7 +23,8 @@ namespace HotTowelSpa
                 .Include("~/scripts/breeze.debug.js")
                 .Include("~/scripts/bootstrap.js")
                 .Include("~/scripts/moment.js")
-				.Include("~/scripts/kendo/2012.3.1114/kendo.web.min.js")
+				
+				.Include("~/scripts/knockout-kendo.min.js")
 				.Include("~/scripts/kendo.breeze.datasource.js")
               );
 
@@ -33,8 +35,8 @@ namespace HotTowelSpa
                 .Include("~/Content/bootstrap-responsive.css")
                 .Include("~/Content/durandal.css")
                 .Include("~/Content/toastr.css")
-				.Include("~/Content/kendo/2012.3.1114/kendo.common.min.css")
-			.Include("~/Content/kendo/2012.3.1114/kendo.default.min.css")
+				.Include("~/Content/kendo/2013.1.319/kendo.common.min.css")
+			.Include("~/Content/kendo/2013.1.319/kendo.default.min.css")
 			.Include("~/Content/app.css")
               );
         }

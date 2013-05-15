@@ -17,7 +17,8 @@ _bin*/
 *.user
 [Dd]ebug
 [Rr]elease
-
+sample/SPA/packages
+sample/SPA/build/node_modules
 
 
 # wildcard files that def should not go
